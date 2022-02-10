@@ -4,6 +4,11 @@ import CardMedia from "@mui/material/CardMedia";
 import HomeHeader from "./components/HomeHeader/HomeHeader";
 import Start from "./components/Start/Start";
 import {Box} from "@mui/system";
+import ImportantRule from "./components/ImportantRule/ImportantRule";
+import AboutRuberah from "./components/AboutRuberah/AboutRuberah";
+import RuberahPath from "./components/RuberahPath/RuberahPath";
+import Growth from "./components/Growth/Growth";
+import Footer from "../generalComponents/Footer/Footer";
 
 function HomePage(props) {
     return (
@@ -21,6 +26,11 @@ function HomePage(props) {
                 <HomeHeader/>
             </CardMedia>
             <Start/>
+            <ImportantRule/>
+            <AboutRuberah/>
+            <RuberahPath/>
+            <Growth/>
+            <Footer/>
         </Box>
 
     );

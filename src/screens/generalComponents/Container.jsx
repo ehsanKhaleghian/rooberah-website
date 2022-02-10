@@ -7,8 +7,9 @@ function Container(props) {
             px: {
                 xs: 1,
                 sm: 4,
-                md: 10
-            }
+                md: 10,
+            },
+            ...props.sx
         }}>
             {props.children}
         </Box>

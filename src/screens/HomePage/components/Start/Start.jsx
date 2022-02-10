@@ -2,9 +2,8 @@ import React from 'react';
 import Grid from "@mui/material/Grid";
 import Paragraph from "../../../generalComponents/Paragraph";
 import Container from "../../../generalComponents/Container";
-import CardMedia from "@mui/material/CardMedia";
 
-function Start(props) {
+function Start() {
     return (
         <Container>
             <Grid container columnSpacing={2} direction="row-reverse" sx={{
