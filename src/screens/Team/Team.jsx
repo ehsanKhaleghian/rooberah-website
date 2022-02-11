@@ -1,13 +1,15 @@
 import React from 'react';
-import Container from "../generalComponents/Container";
-import Navbar from "../Navbar/Navbar";
+import TeamHeader from "./components/TeamHeader/TeamHeader";
+import CurrentTeam from "./components/CurrentTeam/CurrentTeam";
+import RuberahTeam from "./components/RuberahTeam/RuberahTeam";
 
-function Team(props) {
+function Team() {
     return (
-        <Container>
-            <Navbar tabIndex={3}/>
-            <h1>TEAM</h1>
-        </Container>
+        <React.Fragment>
+            <TeamHeader/>
+            <CurrentTeam/>
+            <RuberahTeam/>
+        </React.Fragment>
     );
 }
 

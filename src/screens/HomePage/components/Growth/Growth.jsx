@@ -1,12 +1,16 @@
 import React from 'react';
 import CardMedia from "@mui/material/CardMedia";
 import Container from "../../../generalComponents/Container";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import {useNavigate} from "react-router-dom";
 
 function Growth(props) {
+    const navigate = useNavigate();
+    const jobOpportunities = () => {
+        navigate("/jobs")
+    }
     return (
         <CardMedia
             image={require("../../../../assets/images/bg-blue/rectangle-copy@3x.png")}
@@ -24,7 +28,9 @@ function Growth(props) {
                         fontSize: {lg: 75, md: 65, sm: 58, xs: 50},
                         color: "white",
                         direction: "rtl",
-                        fontWeight: "bold"
+                        fontWeight: "bold",
+                        position: "relative",
+                        zIndex: 11
                     }}>
                         ما برای رشد، به حضــور شما کنار خودمان نیاز داریم.
                     </Typography>
@@ -34,7 +40,15 @@ function Growth(props) {
                         sx={{mt: 4, textDecoration: "underline", textDecorationColor: "white", minWidth: "fit-content"}}
                     >
                         <Typography
-                            sx={{fontSize: 24, color: "white", direction: "rtl"}}>
+                            onClick={jobOpportunities}
+                            sx={{
+                                fontSize: 24,
+                                color: "white",
+                                direction: "rtl",
+                                position: "relative",
+                                zIndex: 11,
+                                cursor: "pointer"
+                            }}>
                             موقعیت‌های شغلی
                         </Typography>
                         <Box sx={{

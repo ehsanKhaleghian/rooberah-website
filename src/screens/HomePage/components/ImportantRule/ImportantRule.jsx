@@ -5,8 +5,13 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Container from "../../../generalComponents/Container";
+import {useNavigate} from "react-router-dom";
 
 function ImportantRule() {
+    const navigate = useNavigate();
+    const contactUsHandler = () => {
+        navigate("/contactus")
+    }
     return (
         <CardMedia
             image={require("../../../../assets/images/bg-blue/rectangle-copy@3x.png")}
@@ -29,8 +34,11 @@ function ImportantRule() {
                             چیزی اگر بلد باشیم به دیگران یاد می‌دیم، چون در مسیر موفقیت افراد زیادی به ما بی‌منت کمک
                             کردن.
                         </Typography>
-                        <Stack direction={"row"} alignItems={"flex-start"}
-                               sx={{mt: 4, textDecoration: "underline", textDecorationColor: "white"}}>
+                        <Stack
+                            onClick={contactUsHandler}
+                            direction={"row"} alignItems={"flex-start"}
+                            sx={{mt: 4, textDecoration: "underline", textDecorationColor: "white", cursor: "pointer"}}
+                        >
                             <Typography
                                 sx={{fontSize: 24, color: "white", direction: "rtl"}}>
                                 تماس با ما
